@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Tutorial</title>
+  </head>
+  <body>
+    <input type="text" id="pfpBox" placeholder="(OPTIONAL) PFP LINK">
+    <input type="text" id="messageBox" placeholder="MESSAGE">
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      const request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/1105608869553651772/E4hUu7OEW7Xn6Lze_k1QySkOas9i3aNb1Sos-sDq2mvKN5P1jC0XI6h4DuLDBZhftBSh");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      let message = document.getElementById("messageBox").value;
+
+      let pfp = "https://cdn.discordapp.com/avatars/470818471916077067/3aad9a6dc9d834be43a23c30c39fcb2f.webp?size=160";
+
+      if (document.getElementById("pfpBox").value != "") {
+        pfp = document.getElementById("pfpBox").value;
+      }
+
+      const params = {
+        username: "Anonymous",
+        avatar_url: pfp,
+        content: message
+      };
+
+      request.send(JSON.stringify(params));
+    
+      document.getElementById("messageBox").value = ""
+    }
+  </script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+    * {
+            font-family: 'Fragment Mono', monospace;
+    }
+
+    html, body {
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+        background: #282828
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    input {
+        background: white;
+        border: none;
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+    button {
+        background: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 15px;
+    }
+  </style>
+</html>
