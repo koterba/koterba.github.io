@@ -11,6 +11,7 @@
     <title>Discord Webhook Tutorial</title>
   </head>
   <body>
+    <input type="text" id="nameBox" placeholder="(OPTIONAL) USERNAME">
     <input type="text" id="pfpBox" placeholder="(OPTIONAL) PFP LINK">
     <input type="text" id="messageBox" placeholder="MESSAGE">
     <button onclick="sendMessage()">Send</button>
@@ -26,13 +27,17 @@
       let message = document.getElementById("messageBox").value;
 
       let pfp = "https://cdn.discordapp.com/avatars/470818471916077067/3aad9a6dc9d834be43a23c30c39fcb2f.webp?size=160";
-
       if (document.getElementById("pfpBox").value != "") {
         pfp = document.getElementById("pfpBox").value;
       }
+      
+      let name = "Anonymous;
+      if (document.getElementById("nameBox").value != "") {
+        name = document.getElementById("nameBox").value;
+      }
 
       const params = {
-        username: "Anonymous",
+        username: name,
         avatar_url: pfp,
         content: message
       };
