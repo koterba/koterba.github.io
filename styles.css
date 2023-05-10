@@ -75,6 +75,12 @@ body {
     margin: 15px 0;
 }
 
+#info {
+    color: rgb(198, 201, 185);
+    position: absolute;
+    top: 10px;
+}
+
 /* #menuButton {
     position: absolute;
     top: 10px;
