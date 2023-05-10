@@ -1,16 +1,3 @@
-// var input = document.getElementById("sendButton");
-
-// // Execute a function when the user presses a key on the keyboard
-// input.addEventListener("keypress", function(event) {
-//   // If the user presses the "Enter" key on the keyboard
-//   if (event.key === "Enter") {
-//     // Cancel the default action, if needed
-//     event.preventDefault();
-//     // Trigger the button element with a click
-//     document.getElementById("sendButton").click();
-//   }
-// }); 
-
 function toggleMenu() {
     var menu = document.getElementById("menu");
     if (menu.style.display == "none") {
@@ -51,13 +38,6 @@ function sendMessage() {
     };
 
     request.send(JSON.stringify(params));
-
-    console.log("got here");
-    console.log(message);
-    console.log(username);
-    console.log(profilePicture);
-    console.log(webhook);
-
     document.getElementById("messageInput").value = ""
 }
 
