@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+* {
+        font-family: 'Fragment Mono', monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
+    margin: 0;
+    background-color: #20172c;
+    padding: 0 20px; /* Add 20px padding to the left and right of the body */
+    box-sizing: border-box;
+}
+
+#messageInput, .buttonStyle {
+    padding: 20px;
+    /* height: 40px; */
+    border-radius: 8px;
+}
+
+#messageInput {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    margin-right: 10px; /* Add 10px margin to the right of the input box */
+    margin-left: 10px; /* Add 10px margin to the left of the input box */
+    background: #807383;
+}
+
+.buttonStyle {
+    width: 100px;
+    border: none;
+    background-color: #534258;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonStyle:hover {
+    background-color: #b699e1;
+}
+
+#inputContainer {
+    display: flex;
+    border-top: 1px solid #ccc;
+    padding: 10px 0; /* Add 10px padding to the top and bottom of the container */
+}
+
+#menu {
+    display: none;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* #menuButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+} */
