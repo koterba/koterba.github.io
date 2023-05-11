@@ -21,33 +21,52 @@ function getProfiles() {
     let found = cookies.find((row) => row.startsWith("profiles="))
     ?.split("=")[1];
     if (found != undefined) {
-        console.log(found);
         return JSON.parse(found);
     }
     document.cookie = 'profiles={"profiles": []}';
     return {profiles: []};
 }
 
+function loadProfiles() {
+    let selection = document.getElementById("profiles");
+    let profiles = getProfiles();
+    if (profiles.profiles.length < 1) return;
+    selection.innerHTML = '<option value="Default">Choose Profile</option>';
+    for (let i=0; i<profiles.profiles.length; i++) {
+        selection.innerHTML += `<option value="${i}">${profiles.profiles[i].username}</option>`
+    }
+}
+
+function loadProfile(e) {
+    let profiles = getProfiles();
+    let index = e.options[e.selectedIndex].value;
+    let profile = profiles.profiles[index];
+    document.getElementById("username").value = profile.username;
+    document.getElementById("profilePicture").value = profile.profilePicture;
+    document.getElementById("webhook").value = profile.webhook;
+}
+
 function addProfile() {
     // add the current config to profiles
     let data = getData();
-    if (data.name == "" && data.profilePicture == "") return;
+    if (data.username == "" && data.profilePicture == "") return;
     let profile = {
-        "name": data.username,
-        "pfp": data.profilePicture,
+        "username": data.username,
+        "profilePicture": data.profilePicture,
         "webhook": data.webhook
     };
 
     let profiles = getProfiles();
     profiles.profiles.push(profile);
     document.cookie = `profiles=${JSON.stringify(profiles)}`;
-    console.log(document.cookie);
-    // console.log(getProfiles());
+    //reloads the profiles, so they show up in the selection
+    loadProfiles();
 }
 
 function resetProfiles() {
     document.cookie =
         "profiles=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+    loadProfiles();
 }
 
 function toggleMenu() {
@@ -73,7 +92,7 @@ function sendMessage() {
         content: data.message
     };
 
-    // request.send(JSON.stringify(params));
-    console.log(data);
+    request.send(JSON.stringify(params));
 }
 
+loadProfiles();

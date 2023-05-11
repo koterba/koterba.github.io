@@ -12,19 +12,16 @@
     <title>Be nice guys</title>
 </head>
 <body>
-    <p id="info">
-        Coming soon:<br>
-        - Profile presets<br>
-        - View your profile<br>
-        - Saveable profiles
-    </p>
     <div id="menu" class="menu">
         <h2>Optional Fields</h2>
         <input type="text" id="username" placeholder="Username"><br>
         <input type="text" id="profilePicture" placeholder="Profile Picture Link"><br>
         <input type="text" id="webhook" placeholder="Webhook"><br>
         <button class="profilesButtonStyle" onclick="addProfile()" id="saveProfile">Save profile</button>
-        <button class="profilesButtonStyle" onclick="resetProfiles()" id="resetProfiles">Reset profiles</button>
+        <button class="profilesButtonStyle" onclick="resetProfiles()" id="resetProfiles">Reset profiles</button><br>
+        <select name="profiles" id="profiles" onchange="if (this.selectedIndex) loadProfile(this);">
+            <option value="Default">Choose Profile</option>
+        </select>
     </div>
     <div id="inputContainer">
         <button class="buttonStyle" onclick="toggleMenu()" id="menuButton">Menu</button>
