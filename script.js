@@ -28,15 +28,15 @@ function getProfiles() {
 
 function loadProfiles() {
     let selection = document.getElementById("profiles");
-    let presetProfiles = {...DEFAULT_PROFILES};
-    for (let i=0; i<presetProfiles.profiles.length; i++) {
-        presetProfiles.profiles[i].username = `PRESET: ${presetProfiles.profiles[i].username}`;
-    }
-    let profiles = [...presetProfiles.profiles, ...getProfiles().profiles];
+    let profiles = [...DEFAULT_PROFILES.profiles, ...getProfiles().profiles];
     if (profiles.length < 1) return;
     selection.innerHTML = '<option value="Default">Choose Profile</option>';
     for (let i=0; i<profiles.length; i++) {
-        selection.innerHTML += `<option value="${i}">${profiles[i].username}</option>`
+        if (i < DEFAULT_PROFILES.profiles.length) {
+            selection.innerHTML += `<option value="${i}">PRESET: ${profiles[i].username}</option>`
+        } else {
+            selection.innerHTML += `<option value="${i}">${profiles[i].username}</option>`
+        }
     }
 }
 
