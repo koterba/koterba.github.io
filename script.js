@@ -12,18 +12,13 @@ function getData() {
     return data;
 }
 
-function loadCookies() {
-    return document.cookie.split("; ");
-}
-
 function getProfiles() {
-    let cookies = loadCookies();
-    let found = cookies.find((row) => row.startsWith("profiles="))
-    ?.split("=")[1];
-    if (found != undefined) {
+    let found = localStorage.getItem("profiles")
+    console.log(found);
+    if (found != null) {
         return JSON.parse(found);
     }
-    document.cookie = 'profiles={"profiles": []}';
+    localStorage.setItem("profiles", '{"profiles": []}');
     return {profiles: []};
 }
 
@@ -58,14 +53,13 @@ function addProfile() {
 
     let profiles = getProfiles();
     profiles.profiles.push(profile);
-    document.cookie = `profiles=${JSON.stringify(profiles)}`;
+    localStorage.setItem("profiles", JSON.stringify(profiles));
     //reloads the profiles, so they show up in the selection
     loadProfiles();
 }
 
 function resetProfiles() {
-    document.cookie =
-        "profiles=; expires=Thu, 01 Jan 1970 00:00:00 GMT; SameSite=None; Secure";
+    localStorage.clear()
     loadProfiles();
 }
 
