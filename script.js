@@ -1,3 +1,8 @@
+const DEFAULT_PROFILES = {"profiles": [
+    {"username": "And Rotate", "profilePicture": "https://images-ext-2.discordapp.net/external/g103JGbvZKERRUudN7pzLTm8xTyMYtMetvv6uyoVtrQ/%3Fa467448/https/i.imgflip.com/790e8y.jpg?width=462&height=417","webhook": ""},
+    {"username": "RamFire", "profilePicture": "https://cdn.discordapp.com/avatars/408521590725279744/6d8f8620c162c63021abe5e81366f020.webp?size=128", "webhook": ""}
+]};
+
 function getData() {
     let data = {
         username: document.getElementById("username").value != "" ? document.getElementById("username").value : "Anonymous",
@@ -18,7 +23,8 @@ function getProfiles() {
     if (found != null) {
         return JSON.parse(found);
     }
-    localStorage.setItem("profiles", '{"profiles": []}');
+    // if there are no profiles, create storage for profiles
+    localStorage.setItem("profiles", JSON.stringify(DEFAULT_PROFILES));
     return {profiles: []};
 }
 
