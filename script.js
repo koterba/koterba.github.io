@@ -1,7 +1,10 @@
 const DEFAULT_PROFILES = {"profiles": [
-    {"username": "And Rotate", "profilePicture": "https://images-ext-2.discordapp.net/external/g103JGbvZKERRUudN7pzLTm8xTyMYtMetvv6uyoVtrQ/%3Fa467448/https/i.imgflip.com/790e8y.jpg?width=462&height=417","webhook": ""},
-    {"username": "RamFire", "profilePicture": "https://cdn.discordapp.com/avatars/408521590725279744/6d8f8620c162c63021abe5e81366f020.webp?size=128", "webhook": ""},
-    {"username": "alan", "profilePicture": "https://cdn.discordapp.com/avatars/438418439095320586/680b0a815cdbca57141187cca52b9b70.webp?size=96", "webhook": ""}
+    {"username": "Farmer Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/829/eb3.png","webhook": ""},
+    {"username": "Chungus Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/852/4e3.png","webhook": ""},
+    {"username": "Goku Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/874/6ec.png","webhook": ""},
+    {"username": "Jewish Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/875/9f5.png","webhook": ""},
+    {"username": "Trans Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/886/0ea.png", "webhook": ""},
+    {"username": "Autism Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/854/9de.png", "webhook": ""}
 ]};
 
 function getData() {
