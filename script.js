@@ -4,7 +4,7 @@ const DEFAULT_PROFILES = {"profiles": [
     {"username": "Goku Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/874/6ec.png","webhook": ""},
     {"username": "Jewish Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/875/9f5.png","webhook": ""},
     {"username": "Trans Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/886/0ea.png", "webhook": ""},
-    {"username": "Autism Floyd", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/854/9de.png", "webhook": ""}
+    {"username": "Autism Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/854/9de.png", "webhook": ""}
 ]};
 
 function getData() {
