@@ -1,10 +1,10 @@
 const DEFAULT_PROFILES = {"profiles": [
-    {"username": "Farmer Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/829/eb3.png","webhook": ""},
-    {"username": "Chungus Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/852/4e3.png","webhook": ""},
-    {"username": "Goku Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/874/6ec.png","webhook": ""},
-    {"username": "Jewish Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/875/9f5.png","webhook": ""},
-    {"username": "Trans Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/886/0ea.png", "webhook": ""},
-    {"username": "Autism Floydy", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/854/9de.png", "webhook": ""}
+    {"username": "Farmer Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/829/eb3.png","webhook": ""},
+    {"username": "Chungus Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/852/4e3.png","webhook": ""},
+    {"username": "Goku Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/874/6ec.png","webhook": ""},
+    {"username": "Jewish Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/875/9f5.png","webhook": ""},
+    {"username": "Trans Floydie", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/886/0ea.png", "webhook": ""},
+    {"username": "Autism Floyd", "profilePicture": "https://i.kym-cdn.com/photos/images/newsfeed/002/276/854/9de.png", "webhook": ""}
 ]};
 
 function getData() {
